@@ -1,35 +1,40 @@
 {
-  "name": "node_authentication",
-  "version": "1.0.0",
-  "description": "",
-  "main": "src/server.js",
-  "scripts": {
-    "dist": "npx tsc",
-    "dev": "nodemon src/server.ts",
-    "start": "node dist/server.js",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "prepare": "husky"
-  },
-  "author": "Vishwa",
-  "license": "ISC",
-  "lint-staged": {
-    "*.ts": [
-      "npm run lint:fix"
-    ]
-  },
-  "devDependencies": {
-    "@commitlint/cli": "^19.4.1",
-    "@commitlint/config-conventional": "^19.4.1",
-    "@eslint/js": "^9.10.0",
-    "@types/eslint__js": "^8.42.3",
-    "@types/node": "^22.5.4",
-    "eslint": "^9.10.0",
-    "husky": "^9.1.5",
-    "lint-staged": "^15.2.10",
-    "nodemon": "^3.1.4",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.5.4",
-    "typescript-eslint": "^8.4.0"
-  }
+    "name": "node_authentication",
+    "version": "1.0.0",
+    "description": "",
+    "main": "src/server.js",
+    "scripts": {
+        "dist": "npx tsc",
+        "dev": "nodemon src/server.ts",
+        "start": "node dist/server.js",
+        "lint": "eslint",
+        "lint:fix": "eslint --fix",
+        "format:check": "prettier . --check",
+        "format:fix": "prettier . --fix",
+        "prepare": "husky"
+    },
+    "author": "Vishwa",
+    "license": "ISC",
+    "lint-staged": {
+        "*.ts": [
+            "npm run lint:fix",
+            "npm run formar:fix"
+        ]
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^19.4.1",
+        "@commitlint/config-conventional": "^19.4.1",
+        "@eslint/js": "^9.10.0",
+        "@types/eslint__js": "^8.42.3",
+        "@types/node": "^22.5.4",
+        "eslint": "^9.10.0",
+        "eslint-config-prettier": "^9.1.0",
+        "husky": "^9.1.5",
+        "lint-staged": "^15.2.10",
+        "nodemon": "^3.1.4",
+        "prettier": "3.3.3",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.5.4",
+        "typescript-eslint": "^8.4.0"
+    }
 }
